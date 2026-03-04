@@ -8,12 +8,6 @@ tools {
 
 stages {
 
-    stage('Checkout Code') {
-        steps {
-            git 'https://github.com/AdrielJG/jenkinsjavacoderepo'
-        }
-    }
-
     stage('Build') {
         steps {
             sh 'mvn clean compile'
