@@ -1,7 +1,6 @@
 pipeline {
 agent { label 'slaveNode1' }
 
-```
 tools {
     maven 'Maven'
 }
@@ -24,6 +23,5 @@ post {
         echo 'Build Failed'
     }
 }
-```
 
 }
