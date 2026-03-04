@@ -1,28 +1,16 @@
 pipeline {
 agent { label 'slaveNode1' }
 
+```
 tools {
     maven 'Maven'
-    jdk 'JDK17'
 }
 
 stages {
 
     stage('Build') {
         steps {
-            sh 'mvn clean compile'
-        }
-    }
-
-    stage('Test') {
-        steps {
-            sh 'mvn test'
-        }
-    }
-
-    stage('Package') {
-        steps {
-            sh 'mvn clean package'
+            bat 'mvn clean package'
         }
     }
 
@@ -36,5 +24,6 @@ post {
         echo 'Build Failed'
     }
 }
+```
 
 }
